@@ -42,18 +42,10 @@ export default function Footer() {
               Brze veze
             </h3>
             <nav className="flex flex-col gap-2.5 text-sm">
-              <a href="/#usluge" className="hover:text-white transition-colors">
-                Usluge
-              </a>
-              <a href="/#cenovnik" className="hover:text-white transition-colors">
-                Cenovnik
-              </a>
-              <a href="/#galerija" className="hover:text-white transition-colors">
-                Galerija
-              </a>
-              <Link href="/kontakt" className="hover:text-white transition-colors">
-                Kontakt
-              </Link>
+              <Link href="/#usluge" className="hover:text-white transition-colors">Usluge</Link>
+              <Link href="/#cenovnik" className="hover:text-white transition-colors">Cenovnik</Link>
+              <Link href="/#galerija" className="hover:text-white transition-colors">Galerija</Link>
+              <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
             </nav>
           </div>
 

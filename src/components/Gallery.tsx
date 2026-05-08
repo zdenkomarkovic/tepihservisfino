@@ -111,6 +111,7 @@ export default function Gallery() {
             className="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={images[selected]!.src}
               alt={images[selected]!.alt}

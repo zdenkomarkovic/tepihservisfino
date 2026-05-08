@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative flex items-center justify-center min-h-screen">
       {/* Background photo */}
       <Image
-        src="/DJI_20260502_140742_554.JPG"
+        src="/DJI_20260502_140758_484.JPG"
         alt="Tepih Servis Fino - radnik"
         fill
         priority

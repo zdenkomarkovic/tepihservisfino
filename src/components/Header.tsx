@@ -23,7 +23,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo.jpg"
             alt="Tepih Servis Fino"
             width={48}
             height={48}
@@ -45,9 +45,7 @@ export default function Header() {
               key={link.label}
               href={link.href}
               className={`font-medium transition-colors ${
-                pathname === link.href
-                  ? "text-blue-700"
-                  : "text-slate-600 hover:text-blue-700"
+                pathname === link.href ? "text-blue-700" : "text-slate-600 hover:text-blue-700"
               }`}
             >
               {link.label}
@@ -69,16 +67,22 @@ export default function Header() {
           >
             Pozovi
           </a>
-          <button
-            onClick={() => setOpen(!open)}
-            className="p-2 text-slate-600"
-            aria-label="Meni"
-          >
+          <button onClick={() => setOpen(!open)} className="p-2 text-slate-600" aria-label="Meni">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {open ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>

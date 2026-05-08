@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 mb-4">
               <div className="bg-white rounded-xl p-1 shrink-0">
                 <Image
-                  src="/logo.png"
+                  src="/logo.jpg"
                   alt="Tepih Servis Fino"
                   width={48}
                   height={48}
@@ -42,10 +42,18 @@ export default function Footer() {
               Brze veze
             </h3>
             <nav className="flex flex-col gap-2.5 text-sm">
-              <Link href="/#usluge" className="hover:text-white transition-colors">Usluge</Link>
-              <Link href="/#cenovnik" className="hover:text-white transition-colors">Cenovnik</Link>
-              <Link href="/#galerija" className="hover:text-white transition-colors">Galerija</Link>
-              <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
+              <Link href="/#usluge" className="hover:text-white transition-colors">
+                Usluge
+              </Link>
+              <Link href="/#cenovnik" className="hover:text-white transition-colors">
+                Cenovnik
+              </Link>
+              <Link href="/#galerija" className="hover:text-white transition-colors">
+                Galerija
+              </Link>
+              <Link href="/kontakt" className="hover:text-white transition-colors">
+                Kontakt
+              </Link>
             </nav>
           </div>
 

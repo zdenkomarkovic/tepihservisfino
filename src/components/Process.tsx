@@ -5,31 +5,47 @@ const steps = [
     number: "01",
     title: "Preuzimanje",
     description:
-      "Pozovite nas i dogovorite termin. Dolazimo na vašu adresu i preuzimamo tepih — nema potrebe da ga vi donosite.",
+      "Dolazimo na vašu adresu i preuzimamo tepih. Nema potrebe da ga vi donosite — mi sve sredimo.",
     image: "/DJI_20260502_140742_554.JPG",
     imageAlt: "Preuzimanje tepiha sa adrese",
   },
   {
     number: "02",
-    title: "Pranje",
+    title: "Tresenje",
     description:
-      "Tepih se pere profesionalnom DR-P 3000 mašinom uz posebna sredstva za čišćenje. Uklanjamo prašinu, mrlje, bakterije i alergene.",
-    image: "/IMG_2724.jpeg",
-    imageAlt: "Mašinsko pranje tepiha",
+      "Tepih prolazi kroz DR-P 3000 mašinu koja izbija prašinu, pesak i sitne nečistoće iz dubine vlakana.",
+    image: "/DJI_20260502_140758_484.JPG",
+    imageAlt: "Tresenje tepiha na DR-P 3000 mašini",
   },
   {
     number: "03",
+    title: "Pranje",
+    description:
+      "Rotacionom četkom i profesionalnim sredstvima temeljno peremo tepih — uklanjamo mrlje, bakterije i alergene.",
+    image: "/IMG_2735.jpeg",
+    imageAlt: "Pranje tepiha rotacionom četkom",
+  },
+  {
+    number: "04",
+    title: "Ispiranje",
+    description:
+      "Tepih se ispira čistom vodom pod pritiskom kako bi se uklonila sva sredstva za pranje i ostatak nečistoće.",
+    image: "/IMG_2732.jpeg",
+    imageAlt: "Ispiranje tepiha čistom vodom",
+  },
+  {
+    number: "05",
     title: "Sušenje",
     description:
-      "Nakon pranja tepih prolazi kroz centrifugu i suši se na specijalnim stalcima u kontrolisanim uslovima — bez skupljanja i bez oštećenja.",
+      "Tepih prolazi kroz centrifugu koja izbacuje višak vode, a zatim se suši na specijalnim stalcima u kontrolisanim uslovima.",
     image: "/IMG_2765.jpeg",
     imageAlt: "Sušenje tepiha na stalku",
   },
   {
-    number: "04",
+    number: "06",
     title: "Dostava",
     description:
-      "Čist i suh tepih vraćamo direktno na vašu adresu. Ceo proces traje obično 2–3 dana, a vi ni jednog momenta ne brinete.",
+      "Čist, suv i svež tepih vraćamo direktno na vašu adresu. Ceo proces traje obično 2–3 dana.",
     image: "/IMG_2768.jpeg",
     imageAlt: "Dostava čistog tepiha",
   },
@@ -47,55 +63,42 @@ export default function Process() {
             Proces pranja tepiha
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto">
-            Od preuzimanja do dostave — sve uradimo umesto vas. Jednostavno, brzo i bez muke.
+            Od preuzimanja do dostave — sve uradimo umesto vas. 6 koraka do savršeno čistog tepiha.
           </p>
         </div>
 
-        {/* Steps grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
-          {steps.map((step, index) => (
-            <div key={step.number} className="relative flex flex-col">
-              {/* Connector line on desktop */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-[108px] left-[calc(50%+60px)] right-0 h-0.5 bg-blue-100 z-0" />
-              )}
-
-              <div className="flex flex-col items-center text-center px-4 pb-10 lg:pb-0">
-                {/* Photo */}
-                <div className="relative w-full max-w-[220px] aspect-[4/3] rounded-2xl overflow-hidden shadow-md mb-5 z-10">
-                  <Image
-                    src={step.image}
-                    alt={step.imageAlt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                  />
-                  {/* Number badge */}
-                  <div className="absolute top-3 left-3 w-9 h-9 bg-blue-700 text-white text-sm font-bold rounded-xl flex items-center justify-center shadow">
-                    {step.number}
-                  </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {steps.map((step) => (
+            <div
+              key={step.number}
+              className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-md transition-shadow"
+            >
+              {/* Photo */}
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={step.image}
+                  alt={step.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                {/* Number badge */}
+                <div className="absolute top-3 left-3 w-10 h-10 bg-blue-700 text-white text-sm font-bold rounded-xl flex items-center justify-center shadow-md">
+                  {step.number}
                 </div>
+              </div>
 
-                {/* Arrow on mobile */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden mb-5 text-blue-200">
-                    <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                )}
-
+              {/* Text */}
+              <div className="p-5">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed max-w-[220px]">
-                  {step.description}
-                </p>
+                <p className="text-slate-500 text-sm leading-relaxed">{step.description}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom note */}
-        <div className="mt-14 bg-slate-50 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-100">
+        {/* Bottom strip */}
+        <div className="mt-10 bg-slate-50 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-100">
           <div className="flex items-center gap-3 text-slate-700">
             <svg className="w-6 h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}

@@ -4,9 +4,8 @@ const services = [
   {
     title: "Pranje tepiha",
     description:
-      "Potpuna usluga od preuzimanja do dostave. Dolazimo po tepih, peremo ga profesionalnom mašinom i vraćamo čistim na vašu adresu.",
+      "Tepisi su jedan od najkorišćenijih delova doma. Po njima hodamo, deca se igraju, kućni ljubimci leže, a prašina, pesak, mirisi i sitne nečistoće ulaze duboko u vlakna. Obično usisavanje uklanja samo površinski deo prljavštine. Za temeljnu higijenu potrebno je profesionalno mašinsko pranje tepiha. U Tepih Servisu Fino tepih prolazi kroz kompletan proces: otresanje, dubinsko pranje, ispiranje čistom vodom, centrifugiranje i sušenje u kontrolisanim uslovima. Na taj način uklanjamo prašinu, pesak, mrlje, neprijatne mirise i nečistoće koje se zadržavaju u dubini tepiha. Radimo pranje tepiha za Kruševac, Varvarin, Ćićevac, Paraćin i okolna mesta.",
     image: "/IMG_2724.jpeg",
-    bullets: ["Preuzimanje sa vaše adrese", "Mašinsko dubinsko pranje", "Sušenje u kontrolisanim uslovima", "Dostava na adresu"],
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
@@ -16,32 +15,66 @@ const services = [
     ),
   },
   {
-    title: "Dubinsko pranje nameštaja",
+    title: "Pranje staza",
     description:
-      "Sofe, fotelje, madraci, stolice — temeljno čišćenje bez oštećenja materijala. Uklanjamo mrlje, alergene i neprijatne mirise.",
-    image: "/pranje%20namestaja.png",
-    bullets: ["Sofe i fotelje", "Madraci", "Trpezarijske stolice", "Sve vrste tkanina"],
+      "Staze se najčešće nalaze u hodnicima, ulazima, kuhinjama i prostorima kroz koje se svakodnevno mnogo prolazi. Zbog toga brzo upijaju prašinu, vlagu, mirise i tragove obuće. Radimo profesionalno pranje staza svih dimenzija, uz pažljivo tretiranje materijala, dubinsko pranje i temeljno ispiranje. Ova usluga je odličan izbor za domaćinstva, stanove, kuće, poslovne prostore, lokale, apartmane i kancelarije. Nakon pranja, staze su čistije, svežije i prijatnije za svakodnevnu upotrebu.",
+    image: "/IMG_2735.jpeg",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
-          d="M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"
+          d="M4 6h16M4 10h16M4 14h16M4 18h16"
         />
       </svg>
     ),
   },
   {
-    title: "Dubinsko pranje auto enterijera",
+    title: "Dubinsko pranje nameštaja",
     description:
-      "Kompletno čišćenje unutrašnjosti vozila — sedišta, podnih tepiha, table, obloga vrata i stropa. Vaš auto kao nov.",
+      "Nameštaj svakodnevno upija prašinu, znoj, mirise hrane, dim, dlake kućnih ljubimaca i nečistoće koje se ne vide odmah. Vremenom tapacirani nameštaj može da izgubi svežinu, promeni miris i izgleda tamnije nego ranije. Zato radimo dubinsko pranje nameštaja profesionalnom opremom koja prodire u tkaninu i izvlači nečistoće iz dubljih slojeva. Radimo: dubinsko pranje ugaonih garnitura, pranje troseda, pranje dvoseda, pranje fotelja, pranje trpezarijskih stolica, pranje dušeka i madraca, osvežavanje tapaciranog nameštaja. Dubinsko pranje nameštaja vraća osećaj svežine prostoru i produžava vek trajanja vaših garnitura, stolica i dušeka.",
+    image: "/pranje%20namestaja.png",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Dezinfekcija tepiha",
+    description:
+      "Pored vidljive čistoće, veoma je važna i higijena. Tepisi u sebi mogu zadržavati bakterije, alergene, prašinu, neprijatne mirise i nečistoće koje ne vidimo golim okom. Zato nudimo dezinfekciju tepiha kao dodatni tretman koji pomaže da tepih bude higijenski čistiji i prijatniji za korišćenje. Dezinfekcija tepiha se posebno preporučuje za: domove sa decom, domove sa kućnim ljubimcima, osobe sklone alergijama, tepihe koji dugo nisu profesionalno prani, tepihe koji imaju neprijatan miris, poslovne prostore i lokale. Čist tepih ne treba samo da se vidi. Treba da se oseti pod rukom, u prostoru i u mirisu doma.",
+    image: "/DJI_20260502_140742_554.JPG",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Pranje auto enterijera",
+    description:
+      "Auto enterijer svakodnevno trpi prašinu, fleke, vlagu, mirise, znoj i tragove korišćenja. Sedišta, patosnice, podne obloge i tekstilni delovi kabine vremenom gube svežinu i upijaju neprijatne mirise. Radimo dubinsko pranje auto enterijera, uključujući sedišta, tapacire, podne obloge, patosnice i tekstilne površine u automobilu. Ova usluga je odličan izbor ako želite da osvežite automobil, uklonite neprijatne mirise, pripremite vozilo za prodaju ili jednostavno vratite osećaj čistoće u kabini.",
     image: "/pranjeauta.png",
-    bullets: ["Sedišta i nasloni", "Podne prostirke", "Tabla i obloge vrata", "Strop i pojasevi"],
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
           d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h7.5M13.5 9H4.5l2.25-3h7.5l3 3M13.5 9l3 9H4.5L7.5 9M16.5 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0"
+        />
+      </svg>
+    ),
+  },
+  {
+    title: "Preuzimanje i dostava tepiha",
+    description:
+      "Znamo da nošenje tepiha nije jednostavno. Tepisi su teški, nezgodni za transport i zahtevaju prostor za pravilno sušenje. Zato nudimo preuzimanje i dostavu tepiha na adresi. Vi nas pozovete, dogovorimo termin, mi dolazimo po tepih, peremo ga i vraćamo čistog i suvog. Preuzimanje i dostava dostupni su za Kruševac, Varvarin, Ćićevac, Paraćin, Bačinu i okolna mesta.",
+    image: "/IMG_2768.jpeg",
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
         />
       </svg>
     ),
@@ -53,15 +86,11 @@ export default function Services() {
     <section id="usluge" className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Šta nudimo
-          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Naše usluge
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto">
-            Koristimo profesionalnu opremu i proverene metode kako bi vaši tepisi
-            i nameštaj bili savršeno čisti.
+            Profesionalno pranje i dubinsko čišćenje za vaš dom, nameštaj i vozilo.
           </p>
         </div>
 
@@ -96,30 +125,19 @@ export default function Services() {
                     {s.title}
                   </h3>
                 </div>
-                <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                <p className="text-slate-500 text-sm leading-relaxed">
                   {s.description}
                 </p>
-                <ul className="mt-auto space-y-1.5">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex items-center gap-2 text-sm text-slate-600">
-                      <svg className="w-4 h-4 text-blue-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA strip */}
         <div className="bg-blue-700 rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <h3 className="text-white font-bold text-xl mb-1">Zakažite odmah</h3>
             <p className="text-blue-100 text-sm">
-              Pozovite nas i dogovorite termin. Brza usluga, povoljne cene, zadovoljni klijenti.
+              Pozovite nas i dogovorite termin.
             </p>
           </div>
           <a

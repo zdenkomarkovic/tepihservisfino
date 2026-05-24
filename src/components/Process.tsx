@@ -3,49 +3,57 @@ import Image from "next/image";
 const steps = [
   {
     number: "01",
-    title: "Preuzimanje",
+    title: "Preuzimanje tepiha",
     description:
-      "Dolazimo na vašu adresu i preuzimamo tepih. Nema potrebe da ga vi donosite — mi sve sredimo.",
+      "Dolazimo po tepih na vašu adresu u dogovorenom terminu. Ne morate da ga nosite, pakujete u auto ili tražite prevoz.",
     image: "/DJI_20260502_140742_554.JPG",
     imageAlt: "Preuzimanje tepiha sa adrese",
   },
   {
     number: "02",
-    title: "Tresenje",
+    title: "Pregled tepiha",
     description:
-      "Tepih prolazi kroz DR-P 3000 mašinu koja izbija prašinu, pesak i sitne nečistoće iz dubine vlakana.",
-    image: "/DJI_20260502_140758_484.JPG",
-    imageAlt: "Tresenje tepiha na DR-P 3000 mašini",
+      "Pre pranja pregledamo tepih, materijal, stepen zaprljanosti, mrlje i eventualna oštećenja. Na osnovu toga biramo odgovarajući pristup pranju.",
+    image: "/IMG_2732.jpeg",
+    imageAlt: "",
   },
   {
     number: "03",
-    title: "Pranje",
+    title: "Otresanje prašine",
     description:
-      "Rotacionom četkom i profesionalnim sredstvima temeljno peremo tepih — uklanjamo mrlje, bakterije i alergene.",
-    image: "/IMG_2735.jpeg",
-    imageAlt: "Pranje tepiha rotacionom četkom",
+      "Pre dubinskog pranja, tepih se otresa kako bi se uklonila suva prašina, pesak, mrvice i nečistoće koje su ušle u dublje slojeve vlakana.",
+    image: "/DJI_20260502_140758_484.JPG",
+    imageAlt: "Otresanje tepiha",
   },
   {
     number: "04",
-    title: "Ispiranje",
+    title: "Dubinsko mašinsko pranje",
     description:
-      "Tepih se ispira čistom vodom pod pritiskom kako bi se uklonila sva sredstva za pranje i ostatak nečistoće.",
-    image: "/IMG_2732.jpeg",
-    imageAlt: "Ispiranje tepiha čistom vodom",
+      "Tepih se pere profesionalnom opremom i odgovarajućim sredstvima za pranje. Cilj je da se uklone mrlje, mirisi, prašina i nečistoće iz dubine tepiha.",
+    image: "/IMG_2735.jpeg",
+    imageAlt: "Dubinsko mašinsko pranje tepiha",
   },
   {
     number: "05",
-    title: "Sušenje",
+    title: "Ispiranje i centrifugiranje",
     description:
-      "Tepih prolazi kroz centrifugu koja izbacuje višak vode, a zatim se suši na specijalnim stalcima u kontrolisanim uslovima.",
+      "Nakon pranja, tepih se temeljno ispira čistom vodom. Zatim prolazi kroz centrifugu, čime se iz njega uklanja višak vode i ubrzava pravilno sušenje.",
+    image: "/IMG_2758.jpeg",
+    imageAlt: "Ispiranje tepiha čistom vodom",
+  },
+  {
+    number: "06",
+    title: "Kontrolisano sušenje",
+    description:
+      "Tepih se suši u kontrolisanim uslovima kako bi bio potpuno suv, svež i spreman za korišćenje. Pravilno sušenje je važno da ne bi došlo do neprijatnih mirisa od vlage.",
     image: "/IMG_2765.jpeg",
     imageAlt: "Sušenje tepiha na stalku",
   },
   {
-    number: "06",
-    title: "Dostava",
+    number: "07",
+    title: "Dostava na adresu",
     description:
-      "Čist, suv i svež tepih vraćamo direktno na vašu adresu. Ceo proces traje obično 2–3 dana.",
+      "Kada je tepih čist i suv, vraćamo ga na vašu adresu u dogovorenom terminu.",
     image: "/IMG_2768.jpeg",
     imageAlt: "Dostava čistog tepiha",
   },
@@ -53,17 +61,14 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="py-20 bg-white">
+    <section id="proces" className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Kako funkcioniše
-          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            Proces pranja tepiha
+            Kako izgleda proces pranja tepiha?
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto">
-            Od preuzimanja do dostave — sve uradimo umesto vas. 6 koraka do savršeno čistog tepiha.
+            Svaki tepih prolazi kroz pažljivo organizovan proces kako bi bio temeljno opran, dobro ispran i pravilno osušen.
           </p>
         </div>
 
@@ -73,22 +78,34 @@ export default function Process() {
               key={step.number}
               className="bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-md transition-shadow"
             >
-              {/* Photo */}
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src={step.image}
-                  alt={step.imageAlt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                {/* Number badge */}
-                <div className="absolute top-3 left-3 w-10 h-10 bg-blue-700 text-white text-sm font-bold rounded-xl flex items-center justify-center shadow-md">
-                  {step.number}
+              {step.image ? (
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={step.image}
+                    alt={step.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute top-3 left-3 w-10 h-10 bg-blue-700 text-white text-sm font-bold rounded-xl flex items-center justify-center shadow-md">
+                    {step.number}
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center relative">
+                  <div className="w-16 h-16 bg-white/70 rounded-2xl flex items-center justify-center text-blue-600 shadow-sm">
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                      />
+                    </svg>
+                  </div>
+                  <div className="absolute top-3 left-3 w-10 h-10 bg-blue-700 text-white text-sm font-bold rounded-xl flex items-center justify-center shadow-md">
+                    {step.number}
+                  </div>
+                </div>
+              )}
 
-              {/* Text */}
               <div className="p-5">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed">{step.description}</p>
@@ -97,7 +114,6 @@ export default function Process() {
           ))}
         </div>
 
-        {/* Bottom strip */}
         <div className="mt-10 bg-slate-50 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-100">
           <div className="flex items-center gap-3 text-slate-700">
             <svg className="w-6 h-6 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,7 +122,7 @@ export default function Process() {
               />
             </svg>
             <span className="text-sm font-medium">
-              Ceo proces obično traje <strong className="text-slate-900">2 do 3 dana</strong> od preuzimanja do dostave.
+              Pranje tepiha obično traje <strong className="text-slate-900">2 do 3 dana</strong>, u zavisnosti od količine tepiha, stepena zaprljanosti, vremenskih uslova i rasporeda preuzimanja.
             </span>
           </div>
           <a

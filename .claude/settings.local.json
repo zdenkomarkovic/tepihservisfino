@@ -8,7 +8,8 @@
       "PowerShell(Start-Sleep -Seconds 10; try { $r = Invoke-WebRequest -Uri http://localhost:3000 -UseBasicParsing -TimeoutSec 5; $r.StatusCode } catch { \"not ready: $_\" })",
       "PowerShell(Get-Process *)",
       "PowerShell(Invoke-WebRequest -Uri http://localhost:3000 -UseBasicParsing -TimeoutSec 10 | Select-Object StatusCode, @{N=\"Len\";E={$_.Content.Length}})",
-      "PowerShell(Stop-Process *)"
+      "PowerShell(Stop-Process *)",
+      "Bash(npx next *)"
     ]
   }
 }

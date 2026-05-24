@@ -3,27 +3,15 @@ const plans = [
     title: "Pranje tepiha",
     price: "300",
     unit: "RSD / m²",
-    description: "Cena uključuje preuzimanje, dubinsko pranje, sušenje i dostavu na vašu adresu.",
-    bullets: [
-      "Preuzimanje sa vaše adrese",
-      "Dubinsko mašinsko pranje",
-      "Sušenje u kontrolisanim uslovima",
-      "Dostava čistog tepiha",
-    ],
+    description: "Cena obuhvata profesionalno mašinsko pranje tepiha, ispiranje, centrifugiranje, kontrolisano sušenje i pripremu za dostavu.",
     highlight: true,
-    cta: { label: "Pozovite: 066 360 680", href: "tel:066360680" },
+    cta: { label: "Pozovite 066 360 680 i zakažite pranje.", href: "tel:066360680" },
   },
   {
     title: "Dubinsko pranje nameštaja",
     price: "Na upit",
     unit: "",
-    description: "Cena zavisi od vrste i količine nameštaja. Pozovite nas za besplatnu procenu.",
-    bullets: [
-      "Sofe i ugaone garniture",
-      "Fotelje i stolice",
-      "Madraci",
-      "Sve vrste tkanina",
-    ],
+    description: "Dubinsko pranje nameštaja vraća osećaj svežine prostoru i produžava vek trajanja vaših garnitura, stolica i dušeka.",
     highlight: false,
     cta: { label: "Pozovite za cenu", href: "tel:066360680" },
   },
@@ -31,13 +19,7 @@ const plans = [
     title: "Pranje auto enterijera",
     price: "Na upit",
     unit: "",
-    description: "Cena zavisi od tipa i veličine vozila. Kontaktirajte nas za informacije.",
-    bullets: [
-      "Sedišta i nasloni",
-      "Podne prostirke i tepisi",
-      "Tabla i obloge vrata",
-      "Strop i sigurnosni pojasevi",
-    ],
+    description: "Ova usluga je odličan izbor ako želite da osvežite automobil, uklonite neprijatne mirise, pripremite vozilo za prodaju ili jednostavno vratite osećaj čistoće u kabini.",
     highlight: false,
     cta: { label: "Pozovite za cenu", href: "tel:066360680" },
   },
@@ -45,18 +27,14 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="cenovnik" className="py-20 bg-slate-50">
+    <section id="cena" className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-blue-600 font-semibold text-sm uppercase tracking-widest mb-3">
-            Transparentne cene
-          </p>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-            Cenovnik
+            Cena pranja tepiha
           </h2>
           <p className="mt-4 text-slate-500 max-w-xl mx-auto">
-            Bez skrivenih troškova. Cena pranja tepiha je fiksna po kvadratnom metru —
-            ostale usluge dogovaramo direktno.
+            Cena pranja tepiha iznosi: 300 RSD po m².
           </p>
         </div>
 
@@ -70,7 +48,6 @@ export default function Pricing() {
                   : "border-slate-200 shadow-sm bg-white"
               }`}
             >
-              {/* Badge */}
               {plan.highlight && (
                 <div className="bg-blue-700 text-white text-xs font-bold uppercase tracking-widest text-center py-2">
                   Fiksna cena
@@ -78,10 +55,8 @@ export default function Pricing() {
               )}
 
               <div className={`p-7 flex flex-col flex-1 ${plan.highlight ? "bg-white" : ""}`}>
-                {/* Title */}
                 <h3 className="font-bold text-slate-900 text-lg mb-4">{plan.title}</h3>
 
-                {/* Price */}
                 <div className="mb-5">
                   {plan.unit ? (
                     <div className="flex items-end gap-1.5 leading-none">
@@ -93,29 +68,10 @@ export default function Pricing() {
                   )}
                 </div>
 
-                {/* Description */}
-                <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                <p className="text-slate-500 text-sm leading-relaxed mb-8">
                   {plan.description}
                 </p>
 
-                {/* Bullets */}
-                <ul className="space-y-2.5 mb-8">
-                  {plan.bullets.map((b) => (
-                    <li key={b} className="flex items-center gap-2.5 text-sm text-slate-600">
-                      <svg
-                        className={`w-4 h-4 shrink-0 ${plan.highlight ? "text-blue-600" : "text-slate-400"}`}
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* CTA */}
                 <a
                   href={plan.cta.href}
                   className={`mt-auto inline-flex items-center justify-center gap-2 font-semibold px-6 py-3.5 rounded-xl transition-colors text-sm ${
@@ -136,9 +92,8 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Footnote */}
-        <p className="mt-8 text-center text-slate-400 text-sm">
-          * Minimalna naplata je 1 m². PDV nije uključen u cenu. Za veće količine moguć dogovor.
+        <p className="mt-8 text-center text-slate-500 text-sm max-w-2xl mx-auto">
+          Za veće količine tepiha, posebne zahteve, pranje staza, dubinsko pranje nameštaja ili pranje auto enterijera, pozovite nas kako bismo vam dali tačnu informaciju i preporuku.
         </p>
       </div>
     </section>

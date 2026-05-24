@@ -9,9 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Tepih Servis Fino | Pranje tepiha Kruševac, Varvarin, Bačina",
+  title: "Tepih Servis Fino | Pranje tepiha Kruševac, Varvarin, Ćićevac i Paraćin",
   description:
-    "Profesionalno pranje tepiha, nameštaja i enterijera automobila u Kruševcu, Varvarinu i okolini. Preuzimanje na vašoj adresi. Bačina, Prvomajska 24. Tel: 066 360 680",
+    "Tepih Servis Fino nudi profesionalno pranje tepiha, staza, nameštaja i auto enterijera. Preuzimanje i dostava za Kruševac, Varvarin, Ćićevac, Paraćin i okolna mesta. Pozovite 066 360 680.",
   keywords:
     "pranje tepiha Kruševac, tepih servis Kruševac, pranje tepiha Varvarin, tepih servis fino, Bačina, dubinsko pranje nameštaja, pranje auto enterijera, preuzimanje tepiha",
 };

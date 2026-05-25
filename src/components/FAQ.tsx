@@ -37,10 +37,27 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
+
 export default function FAQ() {
   return (
     <section id="faq" className="py-20 bg-white">
       <div className="max-w-3xl mx-auto px-4">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12">
           Česta pitanja
         </h2>

@@ -3,9 +3,33 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Tepih Servis Fino – Kruševac, Varvarin, Bačina",
+  title: "Kontakt – Tepih Servis Fino | Kruševac, Varvarin, Bačina",
   description:
     "Kontaktirajte Tepih Servis Fino. Pranje tepiha u Kruševcu, Varvarinu i okolini. Adresa: Prvomajska 24, Bačina. Telefon: 066 360 680.",
+  alternates: {
+    canonical: "/kontakt",
+  },
+  openGraph: {
+    type: "website",
+    locale: "sr_RS",
+    url: "https://perionicatepiha.rs/kontakt",
+    title: "Kontakt – Tepih Servis Fino | Kruševac, Varvarin, Bačina",
+    description:
+      "Kontaktirajte Tepih Servis Fino. Pranje tepiha u Kruševcu, Varvarinu i okolini. Adresa: Prvomajska 24, Bačina. Telefon: 066 360 680.",
+    images: [
+      {
+        url: "/DJI_20260502_140758_484.JPG",
+        alt: "Tepih Servis Fino - kontakt",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kontakt – Tepih Servis Fino | Kruševac, Varvarin, Bačina",
+    description:
+      "Kontaktirajte Tepih Servis Fino. Pranje tepiha u Kruševcu, Varvarinu i okolini. Adresa: Prvomajska 24, Bačina.",
+    images: ["/DJI_20260502_140758_484.JPG"],
+  },
 };
 
 const contactItems = [
